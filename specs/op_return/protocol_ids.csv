@@ -1,0 +1,11 @@
+Prefix,DisplayName,Authors,BitcoinAddress,SpecificationUrl,TxidRedirectUrl
+0x00000020,Tokenized,James Belding,14G5z9kbACK9SiSgZnZmgpxn7aetBUD5vY,http://tokenized.cash/,
+0x00555354,UniSOT,Stephan Nilsson,12L7P3J6LySz2DtGS7vrrnbYAPKcZf8kiu,http://unisot.io/ust,
+0x00584350,Counterparty Cash,Counterparty Cash Association (CCA),17YhxKgKunLjvi7HB1ENGmeLwPFiaxb74V,https://counterparty.cash,
+0x00746C6B,Keyport,Keyport,,https://keyport.io,
+0x02446365,SatoshiDICE,Jon Bestman,1DiceuELb5GZktc3CMEv868DMtU3B5957x,https://satoshidice.com,
+0x64757374,dust,nChain,,,
+0x64736e74,dsnt,nChain,,https://github.com/bitcoin-sv-specs/protocol/blob/master/updates/double-spend-notifications.md,
+0xac1eed88,Miner ID,Steve Shadders,,,
+0xff000000,extended protocol id mask,,,,
+0x6d6f6e6579627574746f6e2e636f6d,Money Button,Ryan X. Charles,,https://www.moneybutton.com
