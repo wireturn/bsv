@@ -1,0 +1,31 @@
+{
+  "Listen": "0.0.0.0:4001",
+  "Fullnode":{
+    "BSV": {
+      "ZMQURL": "tcp://192.168.1.9:18331",
+      "URL": ["fullnodetesting@fullnodetesting9902kcylap0sdsdbldfasdpfuoupouewrh1111jknvllad@192.168.17.218:8332"]
+    }
+  },
+  "Mongo":{
+    "BSV":{
+    "AddrService": ["127.0.0.1:27017", "127.0.0.1:27027", "127.0.0.1:27037"],
+    "BlockHeaderService":"127.0.0.1:27017",
+    "AddrIndexService":"127.0.0.1:27017",
+    "HeightAddrService":"127.0.0.1:27017",
+    "HeightHashService":"127.0.0.1:27017",
+    "MonitoredService":"127.0.0.1:27027",
+    "SyncMonitoredAddrService":"127.0.0.1:27027" 
+    },
+    "BCH":{
+    "AddrService": ["127.0.0.1:27017", "127.0.0.1:27027", "127.0.0.1:27037"],
+    "BlockHeaderService":"127.0.0.1:27017",
+    "AddrIndexService":"127.0.0.1:27017",
+    "HeightAddrService":"127.0.0.1:27017",
+    "HeightHashService":"127.0.0.1:27017",
+    "MonitoredService":"127.0.0.1:27027" ,
+    "SyncMonitoredAddrService":"127.0.0.1:27027" 
+    }
+  },
+  "IsTestEnvironment":true,
+  "SyncCenterIp":"localhost:8080"
+}
