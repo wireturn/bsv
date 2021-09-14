@@ -1,0 +1,927 @@
+{
+	"info": {
+		"_postman_id": "286725a4-462c-4554-b66c-c4a7edf4a419",
+		"name": "SPVchannels[1.1.0] August 2021",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Channel",
+			"item": [
+				{
+					"name": "create channel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"public_read\": true,\r\n  \"public_write\": true,\r\n  \"sequenced\": true,\r\n  \"retention\": {\r\n    \"min_age_days\": 0,\r\n    \"max_age_days\": 99999,\r\n    \"auto_prune\": true\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get channels",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/list",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get channel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update channel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"public_read\": false,\n  \"public_write\": false,\n  \"locked\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete channel",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create channel api-token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"description\": \"Other\",\r\n   \"can_read\": true,\r\n   \"can_write\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}/api-token",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"api-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get channel api-tokens",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}/api-token",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"api-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get channel api-token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}/api-token/{{TOKEN_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"api-token",
+								"{{TOKEN_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete channel api-token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{PASSWORD}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{USERNAME}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/account/{{ACCOUNT_ID}}/channel/{{CHANNEL_ID}}/api-token/{{TOKEN_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"account",
+								"{{ACCOUNT_ID}}",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"api-token",
+								"{{TOKEN_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "get-max-message-seq",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-max-message-seq Other",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get channel messages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}"
+							],
+							"query": [
+								{
+									"key": "unread",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get channel messages Other",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}?unread=true",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}"
+							],
+							"query": [
+								{
+									"key": "unread",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "write channel message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Message content go here",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "write channel message Other",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sequence\": 1,\r\n    \"received\": \"2021-05-26T16:30:12.861114Z\",\r\n    \"content_type\": \"text/plain\",\r\n    \"payload\": \"from other\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark channel sequence",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"read\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}/{{MSG_SEQUENCE}}?older=true",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"{{MSG_SEQUENCE}}"
+							],
+							"query": [
+								{
+									"key": "older",
+									"value": "true"
+								},
+								{
+									"key": "older",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark channel sequence Other",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"read\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}/{{MSG_SEQUENCE}}?older=true",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"{{MSG_SEQUENCE}}"
+							],
+							"query": [
+								{
+									"key": "older",
+									"value": "true"
+								},
+								{
+									"key": "older",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete channel sequence",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}/{{MSG_SEQUENCE}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"{{MSG_SEQUENCE}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Websocket PushNotification",
+			"item": [
+				{
+					"name": "subscribe push notification",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "wss://{{URL_PORT}}/api/v1/channel/{{CHANNEL_ID}}/notify?token={{NOTIFY_TOKEN}}",
+							"protocol": "wss",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"channel",
+								"{{CHANNEL_ID}}",
+								"notify"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{NOTIFY_TOKEN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Firebase PushNotification",
+			"item": [
+				{
+					"name": "post messages notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"{{NOTIFY_TOKEN}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/pushnotifications",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pushnotifications"
+							],
+							"query": [
+								{
+									"key": "unread",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update messages notifications Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"{{NOTIFY_TOKEN}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/pushnotifications/{{TOKEN_VALUE}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pushnotifications",
+								"{{TOKEN_VALUE}}"
+							],
+							"query": [
+								{
+									"key": "unread",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete messages notification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN_VALUE}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"{{NOTIFY_TOKEN}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{URL_PORT}}/api/v1/pushnotifications/{{DELETE_TOKEN}}",
+							"protocol": "https",
+							"host": [
+								"{{URL_PORT}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"pushnotifications",
+								"{{DELETE_TOKEN}}"
+							],
+							"query": [
+								{
+									"key": "unread",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

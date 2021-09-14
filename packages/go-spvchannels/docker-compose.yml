@@ -1,0 +1,51 @@
+﻿version: '3.7'
+
+services:
+  spvchannels-db:
+    image: postgres
+    container_name: spvchannels-db
+    volumes:
+      - spvchannels-volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+    networks:
+      - spvchannels-network
+
+  spvchannels-api:
+    image: bitcoinsv/spvchannels:1.1.0
+    container_name: spvchannels
+    command: -startup
+    links:
+      - spvchannels-db:spvchannels-db
+    volumes:
+      - ./devconfig/:/config/:ro
+    ports:
+      - "5010:443"
+    environment:
+      - AppConfiguration:DBConnectionString=Server=spvchannels-db;Port=5432;User Id=channels;Password=channels;Database=channels;
+      - AppConfiguration:DBConnectionStringDDL=Server=spvchannels-db;Port=5432;User Id=channelsddl;Password=channels;Database=channels;
+      - AppConfiguration:DBConnectionStringMaster=Server=spvchannels-db;Port=5432;User Id=postgres;Password=postgres;Database=channels;
+      - AppConfiguration:NotificationTextNewMessage=New message arrived
+      - AppConfiguration:MaxMessageContentLength=65536
+      - AppConfiguration:ChunkedBufferSize=1024
+      - AppConfiguration:TokenSize=64
+      - AppConfiguration:CacheSize=1048576
+      - AppConfiguration:CacheSlidingExpirationTime=60
+      - AppConfiguration:CacheAbsoluteExpirationTime=600
+      - AppConfiguration:FirebaseCredentialsFilePath=
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_NPGSQLLOGMANAGER=False
+      - ASPNETCORE_URLS=https://+:443
+      - ASPNETCORE_HTTPS_PORT=5010
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=devkey
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/config/devkey.pfx
+    networks:
+      - spvchannels-network
+    depends_on:
+      - spvchannels-db
+
+volumes:
+  spvchannels-volume:
+
+networks:
+  spvchannels-network:
