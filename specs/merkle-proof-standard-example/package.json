@@ -1,0 +1,17 @@
+{
+  "name": "merkleproof-tsc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bsv": "^1.5.4",
+    "buffer-swap-endianness": "^1.0.0",
+    "mocha": "^8.3.2"
+  }
+}
