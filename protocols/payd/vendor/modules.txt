@@ -1,0 +1,221 @@
+# github.com/bitcoinschema/go-bitcoin v0.3.17
+## explicit
+github.com/bitcoinschema/go-bitcoin
+# github.com/bitcoinsv/bsvd v0.0.0-20190609155523-4c29707f7173
+github.com/bitcoinsv/bsvd/bsvec
+github.com/bitcoinsv/bsvd/chaincfg
+github.com/bitcoinsv/bsvd/chaincfg/chainhash
+github.com/bitcoinsv/bsvd/txscript
+github.com/bitcoinsv/bsvd/wire
+# github.com/bitcoinsv/bsvlog v0.0.0-20181216181007-cb81b076bf2e
+github.com/bitcoinsv/bsvlog
+# github.com/bitcoinsv/bsvutil v0.0.0-20181216182056-1d77cf353ea9
+github.com/bitcoinsv/bsvutil
+github.com/bitcoinsv/bsvutil/base58
+github.com/bitcoinsv/bsvutil/hdkeychain
+# github.com/boombuler/barcode v1.0.1
+## explicit
+github.com/boombuler/barcode
+github.com/boombuler/barcode/qr
+github.com/boombuler/barcode/utils
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/dgrijalva/jwt-go v3.2.0+incompatible
+github.com/dgrijalva/jwt-go
+# github.com/fsnotify/fsnotify v1.4.9
+## explicit
+github.com/fsnotify/fsnotify
+# github.com/go-resty/resty/v2 v2.5.0
+github.com/go-resty/resty/v2
+# github.com/gojektech/heimdall/v6 v6.1.0
+github.com/gojektech/heimdall/v6
+github.com/gojektech/heimdall/v6/httpclient
+# github.com/gojektech/valkyrie v0.0.0-20190210220504-8f62c1e7ba45
+github.com/gojektech/valkyrie
+# github.com/golang-migrate/migrate/v4 v4.14.1
+## explicit
+github.com/golang-migrate/migrate/v4
+github.com/golang-migrate/migrate/v4/database
+github.com/golang-migrate/migrate/v4/database/sqlite3
+github.com/golang-migrate/migrate/v4/internal/url
+github.com/golang-migrate/migrate/v4/source
+github.com/golang-migrate/migrate/v4/source/file
+github.com/golang-migrate/migrate/v4/source/httpfs
+# github.com/google/uuid v1.3.0
+github.com/google/uuid
+# github.com/hashicorp/errwrap v1.0.0
+github.com/hashicorp/errwrap
+# github.com/hashicorp/go-multierror v1.1.0
+github.com/hashicorp/go-multierror
+# github.com/hashicorp/hcl v1.0.0
+github.com/hashicorp/hcl
+github.com/hashicorp/hcl/hcl/ast
+github.com/hashicorp/hcl/hcl/parser
+github.com/hashicorp/hcl/hcl/printer
+github.com/hashicorp/hcl/hcl/scanner
+github.com/hashicorp/hcl/hcl/strconv
+github.com/hashicorp/hcl/hcl/token
+github.com/hashicorp/hcl/json/parser
+github.com/hashicorp/hcl/json/scanner
+github.com/hashicorp/hcl/json/token
+# github.com/jmoiron/sqlx v1.3.1
+## explicit
+github.com/jmoiron/sqlx
+github.com/jmoiron/sqlx/reflectx
+# github.com/kr/text v0.2.0
+## explicit
+# github.com/labstack/echo/v4 v4.1.17
+## explicit
+github.com/labstack/echo/v4
+github.com/labstack/echo/v4/middleware
+# github.com/labstack/gommon v0.3.0
+## explicit
+github.com/labstack/gommon/bytes
+github.com/labstack/gommon/color
+github.com/labstack/gommon/log
+github.com/labstack/gommon/random
+# github.com/lib/pq v1.9.0
+## explicit
+# github.com/libsv/go-bc v0.1.2-0.20210824135914-5608544d22bf
+## explicit
+github.com/libsv/go-bc
+github.com/libsv/go-bc/spv
+# github.com/libsv/go-bk v0.1.4
+## explicit
+github.com/libsv/go-bk/base58
+github.com/libsv/go-bk/bec
+github.com/libsv/go-bk/bip32
+github.com/libsv/go-bk/chaincfg
+github.com/libsv/go-bk/crypto
+github.com/libsv/go-bk/envelope
+# github.com/libsv/go-bt v1.0.0
+github.com/libsv/go-bt
+github.com/libsv/go-bt/bscript
+github.com/libsv/go-bt/crypto
+github.com/libsv/go-bt/sighash
+# github.com/libsv/go-bt/v2 v2.0.0-beta.2
+## explicit
+github.com/libsv/go-bt/v2
+github.com/libsv/go-bt/v2/bscript
+github.com/libsv/go-bt/v2/sighash
+# github.com/magiconair/properties v1.8.4
+## explicit
+github.com/magiconair/properties
+# github.com/matryer/is v1.4.0
+## explicit
+github.com/matryer/is
+# github.com/mattn/go-colorable v0.1.8
+## explicit
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.12
+github.com/mattn/go-isatty
+# github.com/mattn/go-sqlite3 v1.14.6
+## explicit
+github.com/mattn/go-sqlite3
+# github.com/miekg/dns v1.1.40
+github.com/miekg/dns
+# github.com/mitchellh/mapstructure v1.4.0
+## explicit
+github.com/mitchellh/mapstructure
+# github.com/mrz1836/go-sanitize v1.1.3
+github.com/mrz1836/go-sanitize
+# github.com/mrz1836/go-validate v0.2.0
+github.com/mrz1836/go-validate
+# github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e
+## explicit
+# github.com/pelletier/go-toml v1.8.1
+## explicit
+github.com/pelletier/go-toml
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
+# github.com/speps/go-hashids v2.0.0+incompatible
+## explicit
+github.com/speps/go-hashids
+# github.com/spf13/afero v1.5.1
+## explicit
+github.com/spf13/afero
+github.com/spf13/afero/mem
+# github.com/spf13/cast v1.3.1
+## explicit
+github.com/spf13/cast
+# github.com/spf13/jwalterweatherman v1.1.0
+## explicit
+github.com/spf13/jwalterweatherman
+# github.com/spf13/pflag v1.0.5
+## explicit
+github.com/spf13/pflag
+# github.com/spf13/viper v1.7.1
+## explicit
+github.com/spf13/viper
+# github.com/stretchr/objx v0.3.0
+github.com/stretchr/objx
+# github.com/stretchr/testify v1.7.0
+## explicit
+github.com/stretchr/testify/assert
+github.com/stretchr/testify/mock
+# github.com/subosito/gotenv v1.2.0
+github.com/subosito/gotenv
+# github.com/theflyingcodr/govalidator v0.0.1
+## explicit
+github.com/theflyingcodr/govalidator
+# github.com/theflyingcodr/lathos v0.0.3
+## explicit
+github.com/theflyingcodr/lathos
+github.com/theflyingcodr/lathos/errs
+# github.com/tonicpow/go-minercraft v0.3.0
+## explicit
+github.com/tonicpow/go-minercraft
+# github.com/tonicpow/go-paymail v0.1.6
+## explicit
+github.com/tonicpow/go-paymail
+# github.com/valyala/bytebufferpool v1.0.0
+github.com/valyala/bytebufferpool
+# github.com/valyala/fasttemplate v1.2.1
+github.com/valyala/fasttemplate
+# golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
+golang.org/x/crypto/acme
+golang.org/x/crypto/acme/autocert
+golang.org/x/crypto/ed25519
+golang.org/x/crypto/ed25519/internal/edwards25519
+golang.org/x/crypto/ripemd160
+# golang.org/x/lint v0.0.0-20210508222113-6edffad5e616
+## explicit
+# golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4
+golang.org/x/net/bpf
+golang.org/x/net/http/httpguts
+golang.org/x/net/http2
+golang.org/x/net/http2/h2c
+golang.org/x/net/http2/hpack
+golang.org/x/net/idna
+golang.org/x/net/internal/iana
+golang.org/x/net/internal/socket
+golang.org/x/net/ipv4
+golang.org/x/net/ipv6
+golang.org/x/net/publicsuffix
+# golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/text v0.3.5
+golang.org/x/text/secure/bidirule
+golang.org/x/text/transform
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+# golang.org/x/tools v0.1.5
+## explicit
+# gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f
+## explicit
+# gopkg.in/guregu/null.v3 v3.5.0
+## explicit
+gopkg.in/guregu/null.v3
+# gopkg.in/ini.v1 v1.62.0
+## explicit
+gopkg.in/ini.v1
+# gopkg.in/yaml.v2 v2.4.0
+## explicit
+gopkg.in/yaml.v2
+# gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+gopkg.in/yaml.v3
