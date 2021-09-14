@@ -1,0 +1,42 @@
+{{ template "header" . }}
+<body>
+<div class="row">
+ <div class="col-6">
+  <div class="row">
+   <span id="satoshis" class="col-12"></span>
+  </div>
+  <section id="buttons">
+   <div class="row button-row">
+    <div class="col-3"> <button class="keypad">1</button></div>
+    <div class="col-3"> <button class="keypad">2</button></div>
+    <div class="col-3"> <button class="keypad">3</button></div>
+    <div class="col-3" title="cancel"><span id="cancel" class="material-icons">close</span></div>
+   </div>
+   <div class="row">
+    <div class="col-3"> <button class="keypad">4</button></div>
+    <div class="col-3"> <button class="keypad">5</button></div>
+    <div class="col-3"> <button class="keypad">6</button></div>
+    <div class="col-3" title="back"><span id="back" class="material-icons">keyboard_backspace</span></div>
+   </div>
+   <div class="row">
+    <div class="col-3"> <button class="keypad">7</button></div>
+    <div class="col-3"> <button class="keypad">8</button></div>
+    <div class="col-3"> <button class="keypad">9</button></div>
+    <div class="col-3" title="confirm"><span id="done" class="material-icons">done</span></div>
+   </div>
+   <div class="row">
+    <div class="col-3"> </div>
+    <div class="col-3"> <button class="col-3 keypad">0</button></div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+   </div>
+  </section>
+ </div>
+ <div class="col-6">
+  <div class="row">
+   <aside class="col-12" id="qrcode"></aside>
+  </div>
+ </div>
+</div>
+</body>
+</html>

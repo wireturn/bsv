@@ -1,0 +1,92 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+body{
+    font-size:3rem;
+    background:#373737;
+}
+
+#satoshis{
+    background: rgba(0,0,0,.2);
+    text-align: center;
+    display: inline-block;
+    color:#e2e2e2;
+    height:80px;
+}
+
+#buttons{
+    text-align: center;
+    position: relative;
+}
+
+
+#buttons button{
+    border-radius: 50%;
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    line-height: 150px;
+    font-size: 5rem;
+    color:#e2e2e2;
+    background: none;
+    border:none;
+    transform: translateX(25%);
+}
+
+#buttons button:hover{
+    background: rgba(0,0,0,.2);
+    cursor:pointer;
+}
+
+.generate {
+    height: 80px;
+    background: darkseagreen;
+    border-radius: 40px;
+    border: none;
+    font-size: 2rem;
+}
+
+#done{
+    padding-top: 35px;
+    color:green;
+    font-size: 5rem !important;
+    text-align: center;
+    cursor:pointer;
+}
+
+#back{
+    padding-top: 35px;
+    color:darkorange;
+    font-size: 5rem !important;
+    text-align: center;
+    cursor:pointer;
+}
+
+#cancel{
+    padding-top: 35px;
+    color:red;
+    font-size: 5rem !important;
+    text-align: center;
+    cursor:pointer;
+}
+
+*:focus {
+    outline: none;
+}
+
+#qrcode{
+    margin:50px;
+}
+
+#qrcode img{
+    width:80%;
+}
