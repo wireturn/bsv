@@ -1,0 +1,14 @@
+[book]
+authors = ["andy", "Ryan X. Charles"]
+multilingual = false
+src = "src"
+title = "Paymail"
+
+[preprocessor.archidoc]
+renderer = { includes = [ "theme.iuml" ] }
+
+[preprocessor.archidoc.stamp]
+footer = "Copyright 2019 nChain and Money Button"
+
+[build]
+build-dir = "docs"
