@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "APIGateway.Test.Stress": {
+      "commandName": "Project",
+      "commandLineArgs": "send D:\\src\\crea\\merchantapi2\\src\\MerchantAPI\\APIGateway\\APIGateway.Test.Stress\\SendConfigSample.json"
+    }
+  }
+}
