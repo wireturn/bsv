@@ -1,0 +1,19 @@
+{
+  "name": "id-generator",
+  "version": "1.0.0",
+  "description": "```npm install```",
+  "main": "generate-id.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jadwahab@bitbucket.org/nchteamnch/id-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nchteamnch/id-generator#readme",
+  "dependencies": {
+    "bsv": "^1.1.0"
+  }
+}
