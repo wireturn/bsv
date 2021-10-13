@@ -1,0 +1,12 @@
+contract Equals {
+    int x;
+
+    constructor(int x) {
+        this.x = x;
+    }
+
+    public function equals(int y) {
+        require(this.x == y);
+    }
+
+}
