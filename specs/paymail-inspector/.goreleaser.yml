@@ -1,0 +1,81 @@
+# Make sure to check the documentation at http://goreleaser.com
+# ---------------------------
+# GENERAL
+# ---------------------------
+before:
+  hooks:
+    - make all
+snapshot:
+  name_template: "{{ .Tag }}"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^.github:'
+      - '^test:'
+
+# ---------------------------
+# BUILDER
+# ---------------------------
+builds:
+  - env:
+    - CGO_ENABLED=0
+    - GO111MODULE=on
+    binary: "paymail"
+    goarch:
+    - amd64
+    - arm64
+    goos:
+    - darwin
+    - linux
+    - windows
+    goarm:
+    - 6
+    - 7
+    ldflags:
+    - -s -w -X github.com/mrz1836/{{ .ProjectName }}/cmd.Version={{ .Version }}
+
+# ---------------------------
+# Archives + Checksums
+# ---------------------------
+archives:
+  - wrap_in_directory: app
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    replacements:
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+      386: 32-bit
+      amd64: 64-bit
+checksum:
+  name_template: "{{ .ProjectName }}_checksums.txt"
+  algorithm: sha256
+
+# ---------------------------
+# Github Release
+# ---------------------------
+release:
+  prerelease: true
+  name_template: "Release v{{.Version}}"
+
+# ---------------------------
+# Brews - OSX
+# ---------------------------
+brews:
+  -
+    tap:
+      owner: mrz1836
+      name: homebrew-paymail-inspector
+    commit_author:
+      name: mrz1836
+      email: mrz1818@protonmail.ch
+    caveats: |
+      See the Github repo for more information
+    homepage: https://github.com/mrz1836/paymail-inspector
+    description: &description |
+      CLI app for interacting with paymail service providers
+    install: |
+      bin.install "paymail"
+    test: |
+      system "#{bin}/paymail", "--version"
+      system "#{bin}/paymail", "-h"
