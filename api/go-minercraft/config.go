@@ -5,7 +5,7 @@ import "time"
 const (
 
 	// version is the current package version
-	version = "v0.3.0"
+	version = "v0.3.1"
 
 	// defaultUserAgent is the default user agent for all requests
 	defaultUserAgent string = "go-minercraft: " + version
