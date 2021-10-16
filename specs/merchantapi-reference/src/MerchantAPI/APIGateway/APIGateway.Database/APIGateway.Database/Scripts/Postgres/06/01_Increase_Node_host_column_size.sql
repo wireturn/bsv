@@ -1,1 +1,0 @@
-﻿ALTER TABLE node ALTER COLUMN host TYPE varchar(256);
