@@ -1,1 +1,0 @@
-./api -config config.json --log_dir=log -v 2
