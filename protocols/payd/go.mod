@@ -1,7 +1,5 @@
 module github.com/libsv/payd
 
-go 1.16
-
 require (
 	github.com/bitcoinschema/go-bitcoin v0.3.17 // indirect
 	github.com/boombuler/barcode v1.0.1
@@ -9,15 +7,14 @@ require (
 	github.com/golang-migrate/migrate/v4 v4.14.1
 	github.com/jmoiron/sqlx v1.3.1
 	github.com/kr/text v0.2.0 // indirect
-	github.com/labstack/echo/v4 v4.1.17
-	github.com/labstack/gommon v0.3.0
+	github.com/labstack/echo/v4 v4.9.0
+	github.com/labstack/gommon v0.3.1
 	github.com/lib/pq v1.9.0 // indirect
 	github.com/libsv/go-bc v0.1.2-0.20210824135914-5608544d22bf
 	github.com/libsv/go-bk v0.1.4
 	github.com/libsv/go-bt/v2 v2.0.0-beta.2
 	github.com/magiconair/properties v1.8.4 // indirect
 	github.com/matryer/is v1.4.0
-	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-sqlite3 v1.14.6
 	github.com/mitchellh/mapstructure v1.4.0 // indirect
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
